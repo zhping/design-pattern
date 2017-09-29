@@ -1,10 +1,19 @@
 package factory;
 
+import abstractfactory.AbstractFactory;
+import abstractfactory.Color;
+
 /**
  * Created by Administrator on 2017/9/29.
  */
-public class ShapeFactory {
+public class ShapeFactory  extends AbstractFactory{
 
+    @Override
+    public Color getColor(String color) {
+        return null;
+    }
+
+    @Override
     public Shape getShape(String shapeType){
         if (shapeType==null){
             return null;
@@ -36,4 +45,6 @@ public class ShapeFactory {
 
         return obj;
     }
+
+
 }
